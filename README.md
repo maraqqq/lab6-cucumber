@@ -1,24 +1,22 @@
-# Lab6 - Cucumber BDD + Selenium (project scaffold)
+Lab6 – Cucumber BDD + Selenium
+Acest proiect reprezintă scheletul pentru tema Laboratorului #6: automatizarea testelor create în Lab #3 (teste manuale) folosind Cucumber BDD și Selenium WebDriver (Chrome).
+Aplicația țintă (din Lab #3): https://adoring-pasteur-3ae17d.netlify.app/mens.html
 
-This project is a scaffold for the Laboratory #6 assignment: automate the tests created in Lab #3 (manual tests) using **Cucumber BDD** and **Selenium WebDriver** (Chrome).
+Ce conține proiectul
+pom.xml (Maven)
+src/test/java/org/example/runner/TestRunner.java
+src/test/java/org/example/steps/* (Hooks, SharedDriver, pașii pentru feature-uri)
+src/test/java/org/example/pages/* (BasePage, MensPage, ContactPage, ProductPage)
+src/test/resources/features/* (feature-uri pentru Contact, Căutare, Produse, QuickView, Preț Coș, Recenzii)
+Un fișier ZIP al proiectului pentru import ușor în IntelliJ.
 
-**Target application (from Lab #3):** https://adoring-pasteur-3ae17d.netlify.app/mens.html
+Cum se rulează
+Importă proiectul în IntelliJ ca proiect Maven.
+Asigură-te că ai instalat Java 17 și Chrome.
+În IntelliJ: Click dreapta pe TestRunner.java → Run. Maven va descărca automat dependențele necesare.
+Rapoarte: un raport HTML va fi generat în folderul target/ prin pluginul Cucumber configurat în runner.
 
-## What is included
-- pom.xml (Maven)
-- src/test/java/org/example/runner/TestRunner.java
-- src/test/java/org/example/steps/* (Hooks, SharedDriver, steps for features)
-- src/test/java/org/example/pages/* (BasePage, MensPage, ContactPage, ProductPage)
-- src/test/resources/features/* (features for Contact, Search, Products, QuickView, CartPrice, Reviews)
-- A ZIP archive of this project for easy import into IntelliJ.
-
-## How to run
-1. Import project into IntelliJ as a Maven project.
-2. Make sure you have Java 17 and Chrome installed.
-3. In IntelliJ: Right-click on `TestRunner.java` and Run. Maven will download dependencies.
-4. Reports: an HTML report will be generated in `target/` by the Cucumber runner plugin entry in the runner configuration.
-
-## Notes
-- Selectors in Page Objects are intentionally written as generic CSS/XPath with comments. If a selector fails, open the target site and adjust the locator accordingly.
-- No absolute file paths are used anywhere.
-- Hooks use WebDriverManager to manage ChromeDriver binary automatically.
+Observații
+Selectorii din Page Objects sunt scriși intenționat generic (CSS/XPath) și au comentarii explicative. Dacă un selector nu funcționează, deschide site-ul țintă și ajustează locatorul corespunzător.
+Nu se folosesc căi absolute către fișiere.
+Hooks folosesc WebDriverManager pentru a gestiona automat binarul ChromeDriver.
